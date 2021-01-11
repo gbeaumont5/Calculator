@@ -7,37 +7,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator!</title>
 </head>
+<script>
+function oneButton() {
+    document.getElementById("results").innerHTML = "1";
+};
+function twoButton() {
+    document.getElementById("results").innerHTML = "2";
+};
+function threeButton() {
+    document.getElementById("results").innerHTML = "3";
+};
+function fourButton() {
+    document.getElementById("results").innerHTML = "4";
+};
+function fiveButton() {
+    document.getElementById("results").innerHTML = "5";
+};
+function sixButton() {
+    document.getElementById("results").innerHTML = "6";
+};
+function sevenButton() {
+    document.getElementById("results").innerHTML = "7";
+};
+function eightButton() {
+    document.getElementById("results").innerHTML = "8";
+};
+function nineButton() {
+    document.getElementById("results").innerHTML = "9";
+};
+
+</script>
 <body>
     <div class="WholeCalculator"> 
-        <p class="Results">test</p>
+        <p id="results" class="Results"></p>
         <div class="FirstRow">
-            <p class="RegularButton">AC</p>
-            <p class="RegularButton">+/-</p>
-            <p class="RegularButton">%</p>
-            <p class="RegularButton orange">/</p>
+            <p onclick="ACButton()" class="RegularButton">AC</p>
+            <p onclick="PlusMinusButton()" class="RegularButton">+/-</p>
+            <p onclick="percentButton()" class="RegularButton">%</p>
+            <p onclick="divideButton()" class="RegularButton orange">/</p>
         </div>
         <div class="SecondRow">
-            <p class="RegularButton">7</p>
-            <p class="RegularButton">8</p>
-            <p class="RegularButton">9</p>
-            <p class="RegularButton orange">X</p> 
+            <p onclick="sevenButton()" class="RegularButton">7</p>
+            <p onclick="eightButton()" class="RegularButton">8</p>
+            <p onclick="nineButton()" class="RegularButton">9</p>
+            <p onclick="XButton()" class="RegularButton orange">X</p> 
         </div>
         <div class="ThirdRow">
-            <p class="RegularButton">4</p>
-            <p class="RegularButton">5</p>
-            <p class="RegularButton">6</p>
+            <p onclick="fourButton()" class="RegularButton">4</p>
+            <p onclick="fiveButton()" class="RegularButton">5</p>
+            <p onclick="sixButton()" class="RegularButton">6</p>
             <p class="RegularButton orange">-</p>
         </div>
         <div class="FourthRow">
-            <p class="RegularButton">1</p>
-            <p class="RegularButton">2</p>
-            <p class="RegularButton">3</p>
-            <p class="RegularButton orange">+</p>
+            <p onclick="oneButton()" id="one" class="RegularButton">1</p>
+            <p onclick="twoButton()" class="RegularButton">2</p>
+            <p onclick="threeButton()" class="RegularButton">3</p>
+            <p onclick="fourButton()" class="RegularButton orange">+</p>
         </div>
         <div class="FifthRow">
-            <p class="RegularButton zero">0</p>
-            <p class="RegularButton">.</p>
-            <p class="RegularButton orange">=</p>
+            <p onclick="zeroButton()" class="RegularButton zero">0</p>
+            <p onclick="decimalButton()" class="RegularButton">.</p>
+            <p onclick="equalButton()" class="RegularButton orange">=</p>
         </div>
     </div>
 </body>
