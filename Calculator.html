@@ -1,45 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="Calculator.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator!</title>
 </head>
-<script>
-function oneButton() {
-    document.getElementById("results").innerHTML = "1";
-};
-function twoButton() {
-    document.getElementById("results").innerHTML = "2";
-};
-function threeButton() {
-    document.getElementById("results").innerHTML = "3";
-};
-function fourButton() {
-    document.getElementById("results").innerHTML = "4";
-};
-function fiveButton() {
-    document.getElementById("results").innerHTML = "5";
-};
-function sixButton() {
-    document.getElementById("results").innerHTML = "6";
-};
-function sevenButton() {
-    document.getElementById("results").innerHTML = "7";
-};
-function eightButton() {
-    document.getElementById("results").innerHTML = "8";
-};
-function nineButton() {
-    document.getElementById("results").innerHTML = "9";
-};
 
-</script>
-<body>
+<body> 
     <div class="WholeCalculator"> 
-        <p id="results" class="Results"></p>
+        <p  id="results" class="Results">0</p>
         <div class="FirstRow">
             <p onclick="ACButton()" class="RegularButton">AC</p>
             <p onclick="PlusMinusButton()" class="RegularButton">+/-</p>
@@ -56,13 +28,13 @@ function nineButton() {
             <p onclick="fourButton()" class="RegularButton">4</p>
             <p onclick="fiveButton()" class="RegularButton">5</p>
             <p onclick="sixButton()" class="RegularButton">6</p>
-            <p class="RegularButton orange">-</p>
+            <p onclick="minusButton()"class="RegularButton orange">-</p>
         </div>
         <div class="FourthRow">
             <p onclick="oneButton()" id="one" class="RegularButton">1</p>
             <p onclick="twoButton()" class="RegularButton">2</p>
             <p onclick="threeButton()" class="RegularButton">3</p>
-            <p onclick="fourButton()" class="RegularButton orange">+</p>
+            <p onclick="additionButton()" class="RegularButton orange">+</p>
         </div>
         <div class="FifthRow">
             <p onclick="zeroButton()" class="RegularButton zero">0</p>
