@@ -3,9 +3,14 @@ let results = 0; //This variable changes based on the functions below
 
 let allClear = 0; //This variable is always zero for all clear
 
-let operations = 0; //
+let operations = 0; //this number will be used for operations
 
 let operator = null; 
+
+let addition = false;
+let division = false;
+let subtraction = false;
+let multiplication = false; 
 
 
 //All the functions below are for each button
@@ -67,25 +72,51 @@ function decimalButton() {
     document.getElementById("results").innerHTML = results;
 };
 function equalButton() {
-    results = parseInt(operations) + parseInt(results);
-   
-    document.getElementById("results").innerHTML = results;
+    if (addition === true) {
+        results = parseInt(operations) + parseInt(results);
+        document.getElementById("results").innerHTML = results;
+        addition = false;
+        operations = 0;
+    } else if (division === true) {
+        results = (parseInt(operations) / parseInt(results));
+        document.getElementById("results").innerHTML = results;
+        division = false;
+        operations = 0;
+    } else if (subtraction === true) {
+        results = (parseInt(operations) - parseInt(results));
+        document.getElementById("results").innerHTML = results;
+        subtraction = false;
+    } else if (multiplication === true) {
+        results = (parseInt(operations) * parseInt(results));
+        document.getElementById("results").innerHTML = results;
+        multiplication = false;
+    } else {
+        document.getElementById("results").innerHTML = results;
+    };
+    
 };
 function minusButton() {
-    results = results;
-    document.getElementById("results").innerHTML = results;
+    operations = results;
+    results = 0; 
+    document.getElementById("results").innerHTML = operations;
+    subtraction = true; 
 };
 function XButton() {
-    results = results;
-    document.getElementById("results").innerHTML = results;
+    operations = results;
+    results = 0; 
+    document.getElementById("results").innerHTML = operations;
+    multiplication = true; 
 };
 function divideButton() {
-    results = results;
-    document.getElementById("results").innerHTML = results;
+    operations = results;
+    results = 0; 
+    document.getElementById("results").innerHTML = operations;
+    division = true; 
 };
 function additionButton() {
     operations = results;
     results = 0; 
     document.getElementById("results").innerHTML = operations;
+    addition = true; 
 };
 
